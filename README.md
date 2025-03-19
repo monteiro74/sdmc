@@ -35,7 +35,7 @@ Incluir itens até 15
 ## 3.1. Diagrama de classe
 
 incluir o digrama feito no white star
-![]()
+![diagrama de classe](https://github.com/monteiro74/sdmc/blob/main/diagrama_de_classe.png)
 
 ## 3.2. Diagrama de casos de uso
 
