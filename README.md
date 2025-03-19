@@ -35,13 +35,16 @@ Incluir itens até 15
 ## 3.1. Diagrama de classe
 
 incluir o digrama feito no white star
+![]()
 
 ## 3.2. Diagrama de casos de uso
 
 
 incluir o digrama feito no white star
+![]()
 
 ## 3.3. Diagrama de atividade
 
 
 incluir o digrama feito no white star
+![]()
