@@ -6,6 +6,8 @@ Sistema para Doação de Material de Construção (SDMC)
 - [2. Descrição](#2-descrição)
 - [3. Diagramas](#3-diagramas)
   - [3.1. Diagrama de classe](#31-diagrama-de-classe)
+    - [digrama feito no white star (versão 1)](#digrama-feito-no-white-star-versão-1)
+    - [Diagrama feito no assistente de AI](#diagrama-feito-no-assistente-de-ai)
   - [3.2. Diagrama de casos de uso](#32-diagrama-de-casos-de-uso)
   - [3.3. Diagrama de atividade](#33-diagrama-de-atividade)
 
@@ -34,8 +36,13 @@ Incluir itens até 15
 
 ## 3.1. Diagrama de classe
 
-incluir o digrama feito no white star
+### digrama feito no white star (versão 1)
+
 ![diagrama de classe](https://github.com/monteiro74/sdmc/blob/main/diagrama_de_classe.png)
+
+### Diagrama feito no assistente de AI
+
+
 
 ## 3.2. Diagrama de casos de uso
 
