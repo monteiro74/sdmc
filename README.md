@@ -4,7 +4,8 @@ Sistema para Doação de Material de Construção (SDMC)
 - [sdmc](#sdmc)
 - [1. Introdução](#1-introdução)
 - [2. Descrição](#2-descrição)
-  - [2.1. Requisitos funcionais e não funcionais](#21-requisitos-funcionais-e-não-funcionais)
+  - [2.1. Requisitos.](#21-requisitos)
+  - [2.2. Funcionais e não-funcionais](#22-funcionais-e-não-funcionais)
 - [3. Diagramas](#3-diagramas)
   - [3.1. Diagrama de classe](#31-diagrama-de-classe)
     - [digrama feito no white star (versão 1)](#digrama-feito-no-white-star-versão-1)
@@ -19,12 +20,15 @@ Sistema para Doação de Material de Construção (SDMC)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
 
 
+
 # 1. Introdução
 
 * Contexto: tarefa de casa...
 * Motivação: tarefa de casa...
 
 # 2. Descrição
+
+## 2.1. Requisitos.
 
 | Id | Requisitos |
 |----|------------|
@@ -56,8 +60,9 @@ Sistema para Doação de Material de Construção (SDMC)
 | 26 | A Instituição deverá ter um seu Site Institucional uma lista de doares, calendário de doação, datas de assembléis, redimento interno, lista de Beneficionários e formuláiros para os que desejarem doar ou receber materiais de construção. |
 | 27 | O Beneficiário deverá apresentar declaração de rendimento ou outro documento equivalente que indique sua situação. |
 
+## 2.2. Funcionais e não-funcionais
 
-## 2.1. Requisitos funcionais e não funcionais
+
 
 # 3. Diagramas
 
