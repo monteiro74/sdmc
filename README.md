@@ -62,8 +62,41 @@ Sistema para Doação de Material de Construção (SDMC)
 
 ## 2.2. Funcionais e não-funcionais
 
-![TIP] Prompt
-teste
+> [!TIP]
+> Faça uma tabela usando Markdown, com duas colunas, uma coluna indicando o requisito e a outra coluna indicando o tipo de requisito (como "Funcional" ou "Não funcional"), para esta tarefa use a lista abaixo:
+
+
+| Requisito                                                                                         | Tipo de Requisito |
+|---------------------------------------------------------------------------------------------------|-------------------|
+| Temos uma instituição sem fins lucrativos                                                        | Funcional         |
+| A Instituição tem os seguintes atributos: nome, cnpj, localização, cidade                          | Funcional         |
+| A Instituição recebe Doação de Materiais de construção                                            | Funcional         |
+| A Instituição tem um Depósito                                                                     | Funcional         |
+| A Instituição recebe Materiais do tipo: tijolo, cimento e telhas                                  | Funcional         |
+| A Instituição tem um Cadastro dos Materiais                                                       | Funcional         |
+| A Instituição tem um Cadastro dos doadores                                                        | Funcional         |
+| A Instituição tem um Cadastro dos Beneficiários                                                   | Funcional         |
+| A Instituição tem um Depósito Temporário de Materiais de construção                               | Funcional         |
+| A Instituição tem um banco de dados de Doadores, Materiais de construção e Beneficiários           | Funcional         |
+| A Instituição tem um pessoal de Staff, Estagiários e Voluntários; o Staff tem diretores e gerentes | Funcional         |
+| A Instituição tem um "contas a receber" e "contas a pagar", cuidado pela gerência contábil        | Funcional         |
+| A Instituição tem um Regimento Interno (RI).                                                      | Funcional         |
+| A Instituição atende apenas no horário da tarde, das 14hs as 18hs                                 | Não Funcional     |
+| A Instituição recebe apenas Materiais de construção usados na estrutura de casas, não recebe do tipo "materiais de interior" ou "materiais de acabamento" | Não Funcional     |
+| A Instituição realiza uma Assembleia por ano, em março.                                           | Não Funcional     |
+| A Instituição realiza Campanhas com data, prazo, responsável e local previamente definidos         | Funcional         |
+| As Campanhas são para arrecadar determinados tipos de Materiais de construção como: telhas e tijolos | Funcional         |
+| Quando o depósito da Instituição está cheio, os Materiais doados ficam com os Doadores temporariamente, até serem acionados para levar o Material ao Depósito da Instituição | Funcional         |
+| A Instituição tem um Controle de estoque indicando, qual Material entrou e quem fez a doação      | Funcional         |
+| O controle de estoque indica onde está armazenado temporariamente o Material até que sejam feita a destinação final deste | Funcional         |
+| O Controle de estoque também tem os dados de qual Beneficiário recebeu os Materiais de construção, em qual data e hora | Funcional         |
+| A Instituição tem um caminhão e uma pickup S10                                                   | Funcional         |
+| A Instituição usa o caminhão e a pickup para fazer entregas de materiais de construção, do depósito até os Beneficiários | Funcional         |
+| Uma ação de doação de Materiais de construção deve ter uma data e hora, previamente agendada com a equipe da Instituição e o Beneficiário | Funcional         |
+| A Instituição deverá ter em seu Site Institucional uma lista de doadores, calendário de doação, datas de assembleias, regimento interno, lista de Beneficiários e formulários para os que desejarem doar ou receber materiais de construção | Funcional         |
+| O Beneficiário deverá apresentar declaração de rendimento ou outro documento equivalente que indique sua situação | Não Funcional     |
+
+
 
 
 
