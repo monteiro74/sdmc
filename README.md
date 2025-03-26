@@ -62,7 +62,7 @@ Sistema para Doação de Material de Construção (SDMC)
 
 ## 2.2. Funcionais e não-funcionais
 
-
+![Tip] Prompt
 
 # 3. Diagramas
 
