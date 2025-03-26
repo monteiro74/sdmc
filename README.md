@@ -9,7 +9,7 @@ Sistema para Doação de Material de Construção (SDMC)
 - [3. Diagramas](#3-diagramas)
   - [3.1. Diagrama de classe](#31-diagrama-de-classe)
     - [digrama feito no white star (versão 1)](#digrama-feito-no-white-star-versão-1)
-    - [Diagrama feito no assistente de AI](#diagrama-feito-no-assistente-de-ai)
+    - [3.1.1. Descrição do Diagrama de classe:](#311-descrição-do-diagrama-de-classe)
   - [3.2. Diagrama ER](#32-diagrama-er)
   - [3.3. Diagrama de casos de uso](#33-diagrama-de-casos-de-uso)
   - [3.3. Diagrama de atividade](#33-diagrama-de-atividade)
@@ -194,11 +194,90 @@ classDiagram
 
 ```
 
+### 3.1.1. Descrição do Diagrama de classe:
 
+Instituicao é a classe principal, representando a entidade que administra a organização, que possui atributos como nome, CNPJ, localização, etc.
 
-### Diagrama feito no assistente de AI
+Doacao é a classe que representa as doações de materiais feitas para a instituição.
+
+Deposito representa os depósitos (temporários e permanentes) de materiais.
+
+Material armazena os diferentes tipos de materiais, como tijolos e telhas.
+
+Doadores e Beneficiarios são as classes que representam as pessoas que doam e aquelas que recebem os materiais, respectivamente.
+
+ControleEstoque é a classe que gerencia o controle do estoque, registrando entradas e saídas de materiais.
+
+Veiculo refere-se aos veículos utilizados pela instituição para transportar materiais.
 
 ## 3.2. Diagrama ER
+
+
+> [!TIP]
+> Faça um diagrama de Entidade Relacionamento usando Markdown e Mermaid, para os requisitos abaixo:
+
+
+```mermaid
+
+erDiagram
+    INSTITUICAO {
+        string nome
+        string cnpj
+        string localizacao
+        string cidade
+        string regimentoInterno
+        string horarioAtendimento
+    }
+
+    DOACAO {
+        string tipoMaterial
+        string dataHora
+        string descricao
+    }
+
+    DEPOSITO {
+        string tipoDeposito
+        boolean estaCheio
+    }
+
+    MATERIAL {
+        string nome
+        string tipo
+        double quantidade
+    }
+
+    DOADOR {
+        string nome
+        string cpfCnpj
+        string endereco
+    }
+
+    BENEFICIARIO {
+        string nome
+        string documentoIdentidade
+        string endereco
+        string tipoMaterialRecebido
+    }
+
+    CONTROLE_ESTOQUE {
+        string localArmazenamento
+        string dataHora
+        string material
+        string doador
+        string beneficiario
+    }
+
+    VEICULO {
+        string modelo
+        string placa
+    }
+
+
+
+```
+
+
+
 
 ## 3.3. Diagrama de casos de uso
 
