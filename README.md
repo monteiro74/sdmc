@@ -108,6 +108,94 @@ Sistema para Doação de Material de Construção (SDMC)
 
 ![diagrama de classe](https://github.com/monteiro74/sdmc/blob/main/diagrama_de_classe.png)
 
+
+> [!TIP]
+> Faça um diagrama de classe usando Markdown e Mermaid, para os requisitos abaixo:
+
+
+```mermaid
+classDiagram
+    class Instituicao {
+        +String nome
+        +String cnpj
+        +String localizacao
+        +String cidade
+        +String regimentoInterno
+        +String horarioAtendimento
+        +realizarAssembléia()
+        +realizarCampanha()
+        +receberDoacao()
+        +gerenciarEstoque()
+        +gerenciarTransporte()
+    }
+
+    class Doacao {
+        +String tipoMaterial
+        +String dataHora
+        +String descricao
+    }
+
+    class Deposito {
+        +String tipoDeposito
+        +boolean estaCheio
+        +armazenarMaterial()
+        +retirarMaterial()
+    }
+
+    class Material {
+        +String nome
+        +String tipo
+        +double quantidade
+    }
+
+    class Doadores {
+        +String nome
+        +String cpfCnpj
+        +String endereco
+        +doarMaterial()
+    }
+
+    class Beneficiarios {
+        +String nome
+        +String documentoIdentidade
+        +String endereco
+        +String tipoMaterialRecebido
+        +receberMaterial()
+    }
+
+    class ControleEstoque {
+        +Material material
+        +Doadores doador
+        +Beneficiarios beneficiario
+        +String localArmazenamento
+        +String dataHora
+        +registrarEntrada()
+        +registrarSaida()
+    }
+
+    class Veiculo {
+        +String modelo
+        +String placa
+        +entregarMaterial()
+    }
+
+    Instituicao "1" --> "1..*" Doacao : recebe
+    Instituicao "1" --> "1" Deposito : tem
+    Instituicao "1" --> "1..*" Material : recebe
+    Instituicao "1" --> "1..*" Doadores : tem
+    Instituicao "1" --> "1..*" Beneficiarios : tem
+    Instituicao "1" --> "1" ControleEstoque : tem
+    Instituicao "1" --> "2" Veiculo : usa
+    Doacao "1" --> "1" Material : relacionado
+    ControleEstoque "1" --> "1" Material : controla
+    ControleEstoque "1" --> "1" Doadores : registra
+    ControleEstoque "1" --> "1" Beneficiarios : registra
+    Veiculo "1" --> "1" Material : transporta
+
+```
+
+
+
 ### Diagrama feito no assistente de AI
 
 ## 3.2. Diagrama ER
