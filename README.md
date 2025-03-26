@@ -18,6 +18,9 @@ Sistema para Doação de Material de Construção (SDMC)
   - [4. Histórias de usuário](#4-histórias-de-usuário)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
+  - [Anexos](#anexos)
+    - [A.1. Script SQL](#a1-script-sql)
+    - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
 
 
 
@@ -272,7 +275,18 @@ erDiagram
         string placa
     }
 
+    INSTITUICAO ||--o{ DOACAO : recebe
+    INSTITUICAO ||--o{ DEPOSITO : possui
+    INSTITUICAO ||--o{ MATERIAL : possui
+    INSTITUICAO ||--o{ DOADOR : cadastra
+    INSTITUICAO ||--o{ BENEFICIARIO : cadastra
+    INSTITUICAO ||--o{ CONTROLE_ESTOQUE : controla
+    INSTITUICAO ||--o{ VEICULO : usa
 
+    DOACAO ||--|{ MATERIAL : inclui
+    DOADOR ||--o{ DOACAO : realiza
+    BENEFICIARIO ||--o{ CONTROLE_ESTOQUE : recebe
+    VEICULO ||--o{ MATERIAL : transporta
 
 ```
 
@@ -299,4 +313,266 @@ incluir o digrama feito no white star
 ## 5. Protótipo de telas
 
 ## 6. Diagrama de navegação de tela
+
+## Anexos
+
+### A.1. Script SQL
+
+> [!TIP]
+> Faça um Script SQL para MySQL, para o diagrama Mermaid acima:
+
+
+```SQL
+
+-- Criar tabela INSTITUICAO
+CREATE TABLE INSTITUICAO (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cnpj VARCHAR(14) NOT NULL,
+    localizacao VARCHAR(255),
+    cidade VARCHAR(255),
+    regimentoInterno TEXT,
+    horarioAtendimento VARCHAR(255)
+);
+
+-- Criar tabela DOACAO
+CREATE TABLE DOACAO (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipoMaterial VARCHAR(255) NOT NULL,
+    dataHora DATETIME NOT NULL,
+    descricao TEXT,
+    doador_id INT,
+    FOREIGN KEY (doador_id) REFERENCES DOADOR(id)
+);
+
+-- Criar tabela DEPOSITO
+CREATE TABLE DEPOSITO (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tipoDeposito VARCHAR(255),
+    estaCheio BOOLEAN NOT NULL,
+    instituicao_id INT,
+    FOREIGN KEY (instituicao_id) REFERENCES INSTITUICAO(id)
+);
+
+-- Criar tabela MATERIAL
+CREATE TABLE MATERIAL (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
+    quantidade DECIMAL(10, 2) NOT NULL
+);
+
+-- Criar tabela DOADOR
+CREATE TABLE DOADOR (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cpfCnpj VARCHAR(14) NOT NULL,
+    endereco VARCHAR(255)
+);
+
+-- Criar tabela BENEFICIARIO
+CREATE TABLE BENEFICIARIO (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    documentoIdentidade VARCHAR(255),
+    endereco VARCHAR(255),
+    tipoMaterialRecebido VARCHAR(255)
+);
+
+-- Criar tabela CONTROLE_ESTOQUE
+CREATE TABLE CONTROLE_ESTOQUE (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    localArmazenamento VARCHAR(255) NOT NULL,
+    dataHora DATETIME NOT NULL,
+    material_id INT,
+    doador_id INT,
+    beneficiario_id INT,
+    FOREIGN KEY (material_id) REFERENCES MATERIAL(id),
+    FOREIGN KEY (doador_id) REFERENCES DOADOR(id),
+    FOREIGN KEY (beneficiario_id) REFERENCES BENEFICIARIO(id)
+);
+
+-- Criar tabela VEICULO
+CREATE TABLE VEICULO (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR(255) NOT NULL,
+    placa VARCHAR(20) NOT NULL
+);
+
+-- Relacionamento entre INSTITUICAO e DOACAO
+CREATE TABLE INSTITUICAO_DOACAO (
+    instituicao_id INT,
+    doacao_id INT,
+    PRIMARY KEY (instituicao_id, doacao_id),
+    FOREIGN KEY (instituicao_id) REFERENCES INSTITUICAO(id),
+    FOREIGN KEY (doacao_id) REFERENCES DOACAO(id)
+);
+
+-- Relacionamento entre INSTITUICAO e MATERIAL
+CREATE TABLE INSTITUICAO_MATERIAL (
+    instituicao_id INT,
+    material_id INT,
+    PRIMARY KEY (instituicao_id, material_id),
+    FOREIGN KEY (instituicao_id) REFERENCES INSTITUICAO(id),
+    FOREIGN KEY (material_id) REFERENCES MATERIAL(id)
+);
+
+-- Relacionamento entre INSTITUICAO e VEICULO
+CREATE TABLE INSTITUICAO_VEICULO (
+    instituicao_id INT,
+    veiculo_id INT,
+    PRIMARY KEY (instituicao_id, veiculo_id),
+    FOREIGN KEY (instituicao_id) REFERENCES INSTITUICAO(id),
+    FOREIGN KEY (veiculo_id) REFERENCES VEICULO(id)
+);
+
+-- Relacionamento entre INSTITUICAO e BENEFICIARIO
+CREATE TABLE INSTITUICAO_BENEFICIARIO (
+    instituicao_id INT,
+    beneficiario_id INT,
+    PRIMARY KEY (instituicao_id, beneficiario_id),
+    FOREIGN KEY (instituicao_id) REFERENCES INSTITUICAO(id),
+    FOREIGN KEY (beneficiario_id) REFERENCES BENEFICIARIO(id)
+);
+
+-- Relacionamento entre DOACAO e MATERIAL
+CREATE TABLE DOACAO_MATERIAL (
+    doacao_id INT,
+    material_id INT,
+    PRIMARY KEY (doacao_id, material_id),
+    FOREIGN KEY (doacao_id) REFERENCES DOACAO(id),
+    FOREIGN KEY (material_id) REFERENCES MATERIAL(id)
+);
+
+```
+
+### A.2. Dados artificiais para testes de banco
+
+
+> [!TIP]
+> Faça um Script SQL para MySQL, usando os comandos Create table anteriores, para popular as tabelas do banco com pelo menos 5 registros ficticios
+
+
+
+```SQL
+
+-- Inserir dados na tabela INSTITUICAO
+INSERT INTO INSTITUICAO (nome, cnpj, localizacao, cidade, regimentoInterno, horarioAtendimento)
+VALUES
+('Instituição A', '12345678000195', 'Rua A, 123', 'Cidade A', 'Regimento A', '14:00 - 18:00'),
+('Instituição B', '98765432000156', 'Av. B, 456', 'Cidade B', 'Regimento B', '14:00 - 18:00'),
+('Instituição C', '11122233000122', 'Rua C, 789', 'Cidade C', 'Regimento C', '14:00 - 18:00'),
+('Instituição D', '22233344000133', 'Rua D, 321', 'Cidade D', 'Regimento D', '14:00 - 18:00'),
+('Instituição E', '33344455000144', 'Av. E, 654', 'Cidade E', 'Regimento E', '14:00 - 18:00');
+
+-- Inserir dados na tabela DOADOR
+INSERT INTO DOADOR (nome, cpfCnpj, endereco)
+VALUES
+('Doador A', '12345678900', 'Rua do Doador A, 10'),
+('Doador B', '98765432100', 'Rua do Doador B, 20'),
+('Doador C', '45612378900', 'Rua do Doador C, 30'),
+('Doador D', '32165498700', 'Rua do Doador D, 40'),
+('Doador E', '65498732100', 'Rua do Doador E, 50');
+
+-- Inserir dados na tabela MATERIAL
+INSERT INTO MATERIAL (nome, tipo, quantidade)
+VALUES
+('Tijolo', 'Estrutura', 1000),
+('Cimento', 'Estrutura', 500),
+('Telha', 'Estrutura', 200),
+('Areia', 'Estrutura', 300),
+('Pedra', 'Estrutura', 400);
+
+-- Inserir dados na tabela BENEFICIARIO
+INSERT INTO BENEFICIARIO (nome, documentoIdentidade, endereco, tipoMaterialRecebido)
+VALUES
+('Beneficiário A', '1234567890', 'Rua Beneficiário A, 10', 'Tijolo'),
+('Beneficiário B', '9876543210', 'Rua Beneficiário B, 20', 'Cimento'),
+('Beneficiário C', '4561237890', 'Rua Beneficiário C, 30', 'Telha'),
+('Beneficiário D', '3216549870', 'Rua Beneficiário D, 40', 'Areia'),
+('Beneficiário E', '6549873210', 'Rua Beneficiário E, 50', 'Pedra');
+
+-- Inserir dados na tabela VEICULO
+INSERT INTO VEICULO (modelo, placa)
+VALUES
+('Caminhão', 'ABC-1234'),
+('Pickup S10', 'DEF-5678'),
+('Furgão', 'GHI-9012'),
+('Van', 'JKL-3456'),
+('Caminhão pequeno', 'MNO-7890');
+
+-- Inserir dados na tabela DEPOSITO
+INSERT INTO DEPOSITO (tipoDeposito, estaCheio, instituicao_id)
+VALUES
+('Depósito Principal', FALSE, 1),
+('Depósito Temporário', FALSE, 1),
+('Depósito Principal', TRUE, 2),
+('Depósito Temporário', FALSE, 3),
+('Depósito Principal', TRUE, 4);
+
+-- Inserir dados na tabela CONTROLE_ESTOQUE
+INSERT INTO CONTROLE_ESTOQUE (localArmazenamento, dataHora, material_id, doador_id, beneficiario_id)
+VALUES
+('Depósito Principal', '2025-03-25 14:00:00', 1, 1, 1),
+('Depósito Temporário', '2025-03-25 15:00:00', 2, 2, 2),
+('Depósito Principal', '2025-03-25 16:00:00', 3, 3, 3),
+('Depósito Temporário', '2025-03-25 17:00:00', 4, 4, 4),
+('Depósito Principal', '2025-03-25 18:00:00', 5, 5, 5);
+
+-- Inserir dados na tabela DOACAO
+INSERT INTO DOACAO (tipoMaterial, dataHora, descricao, doador_id)
+VALUES
+('Tijolo', '2025-03-25 10:00:00', 'Doação de tijolos para construção', 1),
+('Cimento', '2025-03-25 11:00:00', 'Doação de cimento para construção', 2),
+('Telha', '2025-03-25 12:00:00', 'Doação de telhas para construção', 3),
+('Areia', '2025-03-25 13:00:00', 'Doação de areia para construção', 4),
+('Pedra', '2025-03-25 14:00:00', 'Doação de pedras para construção', 5);
+
+-- Relacionamento entre DOACAO e MATERIAL
+INSERT INTO DOACAO_MATERIAL (doacao_id, material_id)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+-- Relacionamento entre INSTITUICAO e DOACAO
+INSERT INTO INSTITUICAO_DOACAO (instituicao_id, doacao_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5);
+
+-- Relacionamento entre INSTITUICAO e MATERIAL
+INSERT INTO INSTITUICAO_MATERIAL (instituicao_id, material_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5);
+
+-- Relacionamento entre INSTITUICAO e VEICULO
+INSERT INTO INSTITUICAO_VEICULO (instituicao_id, veiculo_id)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+-- Relacionamento entre INSTITUICAO e BENEFICIARIO
+INSERT INTO INSTITUICAO_BENEFICIARIO (instituicao_id, beneficiario_id)
+VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5);
+
+
+```
 
