@@ -31,6 +31,8 @@ Sistema para Doação de Material de Construção (SDMC)
 
 # 2. Descrição
 
+Sistema para auxiliar no gerênciamento de uma instituição de caridade, que recebe doações de material de construção e direciona os mesmos para pessoas necessitadas previamente cadastradas.
+
 ## 2.1. Requisitos.
 
 | Id | Requisitos |
@@ -294,6 +296,72 @@ erDiagram
 
 
 ## 3.3. Diagrama de casos de uso
+
+> [!TIP]
+> Faça um diagrama de Casos de Uso usando Markdown e PlantUML, para os requisitos abaixo:
+
+
+@startuml
+actor Doador
+actor Beneficiario
+actor GerenteContabil
+actor Staff
+actor Estagiario
+actor Voluntario
+actor Visitante
+actor CaminhaoPickup
+
+usecase "Cadastrar Material" as UC1
+usecase "Cadastrar Doadores" as UC2
+usecase "Cadastrar Beneficiarios" as UC3
+usecase "Registrar Doacao" as UC4
+usecase "Registrar Entrega de Materiais" as UC5
+usecase "Agendar Doacao" as UC6
+usecase "Consultar Estoque" as UC7
+usecase "Gerenciar Contas a Receber" as UC8
+usecase "Gerenciar Contas a Pagar" as UC9
+usecase "Acompanhar Campanhas" as UC10
+usecase "Organizar Assembleia" as UC11
+usecase "Consultar Site Institucional" as UC12
+usecase "Gerenciar Regimento Interno" as UC13
+usecase "Cadastrar Caminhao ou Pickup" as UC14
+usecase "Agendar Entrega" as UC15
+usecase "Registrar Beneficiario" as UC16
+usecase "Controle Estoque" as UC17
+usecase "Registrar Doacao Temporaria" as UC18
+usecase "Registrar Doacao Confirmada" as UC19
+
+Doador --> UC2: "Doar Materiais"
+Beneficiario --> UC3: "Cadastrar Beneficiário"
+GerenteContabil --> UC8: "Gerenciar Contas a Receber"
+GerenteContabil --> UC9: "Gerenciar Contas a Pagar"
+Staff --> UC1: "Cadastrar Materiais"
+Staff --> UC4: "Registrar Doação"
+Staff --> UC5: "Registrar Entrega de Materiais"
+Staff --> UC6: "Agendar Doação"
+Staff --> UC7: "Consultar Estoque"
+Staff --> UC10: "Acompanhar Campanhas"
+Staff --> UC11: "Organizar Assembleia"
+Staff --> UC13: "Gerenciar Regimento Interno"
+Estagiario --> UC1: "Cadastrar Materiais"
+Estagiario --> UC5: "Registrar Entrega de Materiais"
+Estagiario --> UC6: "Agendar Doação"
+Voluntario --> UC5: "Registrar Entrega de Materiais"
+Voluntario --> UC7: "Consultar Estoque"
+Visitante --> UC12: "Consultar Site Institucional"
+CaminhaoPickup --> UC14: "Cadastrar Caminhão ou Pickup"
+CaminhaoPickup --> UC15: "Agendar Entrega"
+CaminhaoPickup --> UC17: "Controle Estoque"
+Staff --> UC19: "Registrar Doação Confirmada"
+Staff --> UC18: "Registrar Doação Temporária"
+
+@enduml
+
+![]()
+
+
+
+
 
 
 incluir o digrama feito no white star
