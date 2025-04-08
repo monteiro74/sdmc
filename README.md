@@ -15,9 +15,15 @@ Sistema para Doação de Material de Construção (SDMC)
   - [3.3. Diagrama de atividade](#33-diagrama-de-atividade)
   - [3.4. Diagrama de componentes](#34-diagrama-de-componentes)
   - [3.5. Diagrama de implantação](#35-diagrama-de-implantação)
+  - [3.6. Diagramas C4](#36-diagramas-c4)
+    - [3.6.1. Diagrama C4 de contexto.](#361-diagrama-c4-de-contexto)
+    - [3.6.2. Diagrama C4 de contêiner](#362-diagrama-c4-de-contêiner)
+    - [3.6.3. Diagrama C4 de componente](#363-diagrama-c4-de-componente)
+    - [3.6.4. Diagrama C4 de código](#364-diagrama-c4-de-código)
   - [4. Histórias de usuário](#4-histórias-de-usuário)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
+  - [7. Pilha tecnológica](#7-pilha-tecnológica)
   - [Anexos](#anexos)
     - [A.1. Script SQL](#a1-script-sql)
     - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
@@ -357,10 +363,7 @@ Staff --> UC18: "Registrar Doação Temporária"
 
 @enduml
 
-![]()
-
-
-
+![casos de uso](https://github.com/monteiro74/sdmc/blob/main/casos_de_uso_v1.png)
 
 
 
@@ -374,13 +377,28 @@ incluir o digrama feito no white star
 
 ## 3.4. Diagrama de componentes
 
+
 ## 3.5. Diagrama de implantação
+
+
+
+## 3.6. Diagramas C4
+
+### 3.6.1. Diagrama C4 de contexto.
+
+### 3.6.2. Diagrama C4 de contêiner
+
+### 3.6.3. Diagrama C4 de componente
+
+### 3.6.4. Diagrama C4 de código
 
 ## 4. Histórias de usuário
 
 ## 5. Protótipo de telas
 
 ## 6. Diagrama de navegação de tela
+
+## 7. Pilha tecnológica
 
 ## Anexos
 
