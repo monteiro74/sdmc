@@ -307,6 +307,15 @@ erDiagram
 > Faça um diagrama de Casos de Uso usando Markdown e PlantUML, para os requisitos abaixo:
 
 
+```mermaid
+zenuml
+    title Annotators
+    @Actor Alice
+    @Database Bob
+    Alice->Bob: Hi Bob
+    Bob->Alice: Hi Alice
+```
+
 @startuml
 actor Doador
 actor Beneficiario
