@@ -26,9 +26,9 @@ Sistema para Doação de Material de Construção (SDMC)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
   - [8. Cronograma e Gantt](#8-cronograma-e-gantt)
   - [9. Estimativa de custos](#9-estimativa-de-custos)
-  - [Anexos](#anexos)
-    - [A.1. Script SQL](#a1-script-sql)
-    - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
+  - [10. Anexos](#10-anexos)
+    - [10.1. Script SQL](#101-script-sql)
+    - [10.2. Dados artificiais para testes de banco](#102-dados-artificiais-para-testes-de-banco)
 
 
 
@@ -428,9 +428,9 @@ architecture-beta
 ## 9. Estimativa de custos
 
 
-## Anexos
+## 10. Anexos
 
-### A.1. Script SQL
+### 10.1. Script SQL
 
 > [!TIP]
 > Faça um Script SQL para MySQL, para o diagrama Mermaid acima:
@@ -560,7 +560,7 @@ CREATE TABLE DOACAO_MATERIAL (
 
 ```
 
-### A.2. Dados artificiais para testes de banco
+### 10.2. Dados artificiais para testes de banco
 
 
 > [!TIP]
