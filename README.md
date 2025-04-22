@@ -308,7 +308,7 @@ erDiagram
 > [!TIP]
 > Faça um diagrama de Casos de Uso usando Markdown e PlantUML, para os requisitos abaixo:
 
-
+<!--
 ```mermaid
 zenuml
     title Annotators
@@ -317,7 +317,7 @@ zenuml
     Alice->Bob: Hi Bob
     Bob->Alice: Hi Alice
 ```
-
+-->
 
 ```mermaid
 sequenceDiagram
