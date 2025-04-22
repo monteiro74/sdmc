@@ -24,6 +24,8 @@ Sistema para Doação de Material de Construção (SDMC)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
+  - [8. Cronograma e Gantt](#8-cronograma-e-gantt)
+  - [9. Estimativa de custos](#9-estimativa-de-custos)
   - [Anexos](#anexos)
     - [A.1. Script SQL](#a1-script-sql)
     - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
@@ -316,61 +318,14 @@ zenuml
     Bob->Alice: Hi Alice
 ```
 
-@startuml
-actor Doador
-actor Beneficiario
-actor GerenteContabil
-actor Staff
-actor Estagiario
-actor Voluntario
-actor Visitante
-actor CaminhaoPickup
 
-usecase "Cadastrar Material" as UC1
-usecase "Cadastrar Doadores" as UC2
-usecase "Cadastrar Beneficiarios" as UC3
-usecase "Registrar Doacao" as UC4
-usecase "Registrar Entrega de Materiais" as UC5
-usecase "Agendar Doacao" as UC6
-usecase "Consultar Estoque" as UC7
-usecase "Gerenciar Contas a Receber" as UC8
-usecase "Gerenciar Contas a Pagar" as UC9
-usecase "Acompanhar Campanhas" as UC10
-usecase "Organizar Assembleia" as UC11
-usecase "Consultar Site Institucional" as UC12
-usecase "Gerenciar Regimento Interno" as UC13
-usecase "Cadastrar Caminhao ou Pickup" as UC14
-usecase "Agendar Entrega" as UC15
-usecase "Registrar Beneficiario" as UC16
-usecase "Controle Estoque" as UC17
-usecase "Registrar Doacao Temporaria" as UC18
-usecase "Registrar Doacao Confirmada" as UC19
+```mermaid
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```
 
-Doador --> UC2: "Doar Materiais"
-Beneficiario --> UC3: "Cadastrar Beneficiário"
-GerenteContabil --> UC8: "Gerenciar Contas a Receber"
-GerenteContabil --> UC9: "Gerenciar Contas a Pagar"
-Staff --> UC1: "Cadastrar Materiais"
-Staff --> UC4: "Registrar Doação"
-Staff --> UC5: "Registrar Entrega de Materiais"
-Staff --> UC6: "Agendar Doação"
-Staff --> UC7: "Consultar Estoque"
-Staff --> UC10: "Acompanhar Campanhas"
-Staff --> UC11: "Organizar Assembleia"
-Staff --> UC13: "Gerenciar Regimento Interno"
-Estagiario --> UC1: "Cadastrar Materiais"
-Estagiario --> UC5: "Registrar Entrega de Materiais"
-Estagiario --> UC6: "Agendar Doação"
-Voluntario --> UC5: "Registrar Entrega de Materiais"
-Voluntario --> UC7: "Consultar Estoque"
-Visitante --> UC12: "Consultar Site Institucional"
-CaminhaoPickup --> UC14: "Cadastrar Caminhão ou Pickup"
-CaminhaoPickup --> UC15: "Agendar Entrega"
-CaminhaoPickup --> UC17: "Controle Estoque"
-Staff --> UC19: "Registrar Doação Confirmada"
-Staff --> UC18: "Registrar Doação Temporária"
-
-@enduml
 
 ![casos de uso](https://github.com/monteiro74/sdmc/blob/main/casos_de_uso_v1.png)
 
@@ -380,34 +335,79 @@ incluir o digrama feito no white star
 ![]()
 
 ## 3.3. Diagrama de atividade
+ou flowchart
 
 incluir o digrama feito no white star
 ![]()
 
 ## 3.4. Diagrama de componentes
 
+use plantuml
+
 
 ## 3.5. Diagrama de implantação
 
+use plantuml
 
+@startuml
+!define DeploymentUML
 
 ## 3.6. Diagramas C4
 
 ### 3.6.1. Diagrama C4 de contexto.
 
+C4 System Context Diagram (C4Context)
+
 ### 3.6.2. Diagrama C4 de contêiner
+
+C4 Container diagram (C4Container)
 
 ### 3.6.3. Diagrama C4 de componente
 
+C4 Component diagram (C4Component)
+
 ### 3.6.4. Diagrama C4 de código
+
+C4 Deployment diagram (C4Deployment)
 
 ## 4. Histórias de usuário
 
+
+Colocar as histórias de usuários no formato:
+
+"Como um [tipo de usuário], eu quero [ação] para que [benefício].
+
+
 ## 5. Protótipo de telas
+
+
 
 ## 6. Diagrama de navegação de tela
 
+
+
+
 ## 7. Pilha tecnológica
+
+```mermaid
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
+
+## 8. Cronograma e Gantt
+
+
+## 9. Estimativa de custos
+
 
 ## Anexos
 
