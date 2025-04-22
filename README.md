@@ -335,48 +335,65 @@ incluir o digrama feito no white star
 ![]()
 
 ## 3.3. Diagrama de atividade
+
+
+<!--
 ou flowchart
 
 incluir o digrama feito no white star
 ![]()
+-->
 
 ## 3.4. Diagrama de componentes
 
+<!--
 use plantuml
-
+-->
 
 ## 3.5. Diagrama de implantação
 
+<!--
 use plantuml
 
 @startuml
 !define DeploymentUML
+-->
 
 ## 3.6. Diagramas C4
 
 ### 3.6.1. Diagrama C4 de contexto.
 
+<!--
 C4 System Context Diagram (C4Context)
+-->
 
 ### 3.6.2. Diagrama C4 de contêiner
 
+<!--
 C4 Container diagram (C4Container)
+-->
 
 ### 3.6.3. Diagrama C4 de componente
 
+<!--
 C4 Component diagram (C4Component)
+-->
 
 ### 3.6.4. Diagrama C4 de código
 
+<!--
 C4 Deployment diagram (C4Deployment)
+-->
 
 ## 4. Histórias de usuário
 
+<!--
 
 Colocar as histórias de usuários no formato:
 
 "Como um [tipo de usuário], eu quero [ação] para que [benefício].
 
+-->
 
 ## 5. Protótipo de telas
 
@@ -386,8 +403,9 @@ Colocar as histórias de usuários no formato:
 
 
 
-
 ## 7. Pilha tecnológica
+
+<!--
 
 ```mermaid
 architecture-beta
@@ -402,6 +420,7 @@ architecture-beta
     disk1:T -- B:server
     disk2:T -- B:db
 ```
+-->
 
 ## 8. Cronograma e Gantt
 
