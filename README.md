@@ -1,7 +1,10 @@
-# sdmc
-Sistema para Doação de Material de Construção (SDMC)
+# SDMC - Sistema para Doação de Material de Construção
 
-- [sdmc](#sdmc)
+
+
+
+
+- [SDMC - Sistema para Doação de Material de Construção](#sdmc---sistema-para-doação-de-material-de-construção)
 - [1. Introdução](#1-introdução)
 - [2. Descrição](#2-descrição)
   - [2.1. Requisitos.](#21-requisitos)
@@ -23,6 +26,15 @@ Sistema para Doação de Material de Construção (SDMC)
     - [3.6.3. Diagrama C4 de componente](#363-diagrama-c4-de-componente)
     - [3.6.4. Diagrama C4 de código](#364-diagrama-c4-de-código)
   - [4. Histórias de usuário](#4-histórias-de-usuário)
+    - [4.1. Organização de épicos e features](#41-organização-de-épicos-e-features)
+      - [4.1.1. Épico 1: Gestão de Doadores](#411-épico-1-gestão-de-doadores)
+      - [4.1.2. Épico 2: Gestão de Beneficiários](#412-épico-2-gestão-de-beneficiários)
+      - [4.1.3. Épico 3: Operações Internas da Instituição](#413-épico-3-operações-internas-da-instituição)
+      - [4.1.4. Épico 4: Gestão Financeira](#414-épico-4-gestão-financeira)
+      - [4.1.5. Épico 5: Transparência e Comunicação](#415-épico-5-transparência-e-comunicação)
+    - [4.2. Jornada do usuário](#42-jornada-do-usuário)
+      - [4.2.1. Jornada do Usuário: Doador](#421-jornada-do-usuário-doador)
+      - [4.2.2. Jornada do Usuário: Beneficiári](#422-jornada-do-usuário-beneficiári)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
@@ -31,6 +43,10 @@ Sistema para Doação de Material de Construção (SDMC)
   - [10. Anexos](#10-anexos)
     - [10.1. Script SQL](#101-script-sql)
     - [10.2. Dados artificiais para testes de banco](#102-dados-artificiais-para-testes-de-banco)
+
+
+
+
 
 
 
@@ -601,27 +617,187 @@ graph TB
 
 ## 4. Histórias de usuário
 
-<!--
-
-Colocar as histórias de usuários no formato:
-
-"Como um [tipo de usuário], eu quero [ação] para que [benefício].
-
--->
-
 > [!TIP]
 > Dica de Prompt...
+Colocar as histórias de usuários no formato:
+"Como um [tipo de usuário], eu quero [ação] para que [benefício].
 
-Prompt
-Leia a lista de requisitos abaixo:
-[Lista de requisitos]
-1.<br>
-2.<br>
-3.<br>
 
-A partir da [Lista de requisitos] elabore histórias de usuário de acordo com o formato a seguir:
-Como um [tipo de usuário], eu quero [ação] para que [benefício].
+🧑‍🤝‍🧑 Histórias de Usuário por Tipo
+🧍 Pessoa Doadora
+Como doador, eu quero cadastrar meus dados no site da instituição para que eu possa contribuir com doações de materiais de construção.
 
+Como doador, eu quero registrar o tipo e a quantidade de material que estou doando para que a instituição possa organizar melhor o estoque.
+
+Como doador, eu quero ser notificado quando o depósito estiver cheio para que eu possa guardar temporariamente os materiais.
+
+Como doador, eu quero ver meu nome na lista pública de doadores para que eu possa acompanhar minha participação.
+
+👩 Beneficiário
+Como beneficiário, eu quero preencher um formulário no site para solicitar materiais de construção para que eu possa receber ajuda na reforma ou construção da minha casa.
+
+Como beneficiário, eu quero agendar com antecedência a data e hora de entrega para que eu possa estar disponível para receber o material.
+
+Como beneficiário, eu quero saber quais materiais estão disponíveis em estoque para que eu possa solicitar o que realmente está sendo ofertado.
+
+Como beneficiário, eu quero enviar minha declaração de renda ou documento equivalente para que a instituição valide minha situação.
+
+👨 Staff / Estagiário / Voluntário
+Como voluntário, eu quero registrar novos doadores e beneficiários no sistema para que as ações sociais possam ser organizadas corretamente.
+
+Como estagiário, eu quero registrar a entrada e saída de materiais no sistema de estoque para manter as informações atualizadas.
+
+Como membro do staff, eu quero organizar campanhas com prazo e metas para que a instituição consiga arrecadar os materiais certos no tempo necessário.
+
+Como membro do staff, eu quero acessar o regimento interno e horários de funcionamento para garantir o cumprimento das regras da instituição.
+
+👩‍💼 Gerente Contábil
+Como gerente contábil, eu quero controlar as contas a pagar e a receber da instituição para manter a saúde financeira da organização.
+
+Como gerente contábil, eu quero registrar todas as movimentações financeiras no sistema para que os relatórios sejam confiáveis e auditáveis.
+
+🌐 Visitante do Site
+Como visitante do site, eu quero visualizar o calendário de doações e datas das assembleias para que eu possa participar ou colaborar com a instituição.
+
+Como visitante do site, eu quero baixar o regimento interno e conhecer os beneficiários para entender melhor o funcionamento da instituição e seu impacto social.
+
+### 4.1. Organização de épicos e features
+
+#### 4.1.1. Épico 1: Gestão de Doadores
+Objetivo: Permitir que cidadãos doem materiais com facilidade e controle
+
+Features:
+
+Cadastro de doadores via site
+
+Registro de materiais doados
+
+Consulta da situação do depósito (lotado ou não)
+
+Lista pública de doadores no site
+
+Agendamento de entrega pós-depósito cheio
+
+#### 4.1.2. Épico 2: Gestão de Beneficiários
+Objetivo: Facilitar a solicitação e entrega de materiais para quem precisa
+
+Features:
+
+Formulário de solicitação de doações
+
+Upload de documentação de renda
+
+Consulta de estoque disponível
+
+Agendamento de entrega de materiais
+
+Visualização de status da solicitação
+
+#### 4.1.3. Épico 3: Operações Internas da Instituição
+Objetivo: Organizar e manter o funcionamento do sistema da instituição
+
+Features:
+
+Registro interno de entrada/saída de materiais no estoque
+
+Cadastro manual de doadores e beneficiários (por voluntários/staff)
+
+Gerenciamento de campanhas (tipo, prazo, local, responsável)
+
+Controle de veículos para logística
+
+Acesso ao regimento interno e horários de funcionamento
+
+#### 4.1.4. Épico 4: Gestão Financeira
+Objetivo: Garantir o controle contábil da instituição
+
+Features:
+
+Controle de contas a pagar
+
+Controle de contas a receber
+
+Geração de relatórios contábeis
+
+Vinculação de movimentações a eventos ou campanhas
+
+#### 4.1.5. Épico 5: Transparência e Comunicação
+Objetivo: Divulgar ações, regras e dados da instituição ao público
+
+Features:
+
+Calendário de doações no site
+
+Divulgação das datas das assembleias
+
+Página com regimento interno para download
+
+Lista de beneficiários atendidos (parcial/pública)
+
+Formulários de doação e solicitação acessíveis
+
+### 4.2. Jornada do usuário
+
+#### 4.2.1. Jornada do Usuário: Doador
+
+| Etapa           | Ação                                               | Ponto de Contato       | Emoção Esperada | Oportunidade                                |
+|------------------|----------------------------------------------------|--------------------------|------------------|----------------------------------------------|
+| Descoberta      | Encontra o site da instituição                     | Site                    | Curioso, engajado | Mostrar impacto social da doação             |
+| Cadastro        | Preenche formulário de doador                      | Formulário online       | Esperançoso      | Interface simples e responsiva               |
+| Doação          | Registra tipo e quantidade de materiais            | Sistema Web             | Orgulhoso        | Feedback imediato sobre recebimento          |
+| Entrega         | Aguarda agendamento ou guarda material temporariamente | Email / WhatsApp     | Confiante        | Notificação se depósito estiver cheio        |
+| Reconhecimento  | Vê seu nome na lista de doadores                   | Página pública          | Valorizado       | Ranking ou certificado digital de doador     |
+
+#### 4.2.2. Jornada do Usuário: Beneficiári
+
+| Etapa           | Ação                                               | Ponto de Contato       | Emoção Esperada | Oportunidade                                |
+|------------------|----------------------------------------------------|--------------------------|------------------|----------------------------------------------|
+| Descoberta      | Acessa o site da instituição                       | Navegador / Site        | Esperançoso      | Site acessível e inclusivo                   |
+| Solicitação     | Preenche formulário e envia documentos             | Formulário online       | Ansioso          | Validação automática ou suporte remoto       |
+| Acompanhamento  | Consulta status da solicitação                     | Painel ou email         | Impaciente       | Canal de comunicação direto com a equipe     |
+| Agendamento     | Agenda a entrega dos materiais                     | Sistema de agendamento  | Aliviado         | Escolha de datas e veículos disponíveis      |
+| Recebimento     | Recebe materiais em casa                           | Caminhão da instituição | Grato            | Avaliação de satisfação pós-serviço          |
+
+
+**Exemplos usando mermaid e journey**
+
+
+```mermaid
+
+journey
+    title Jornada do Usuário: Doador
+    section Descoberta
+      Encontra o site da instituição: 5
+    section Cadastro
+      Preenche formulário de doador: 4
+    section Doação
+      Registra tipo e quantidade de materiais: 4
+    section Entrega
+      Aguarda agendamento ou guarda material: 3
+    section Reconhecimento
+      Vê seu nome na lista de doadores: 5
+
+
+```
+
+**Exemplos **
+
+```mermaid
+
+journey
+    title Jornada do Usuário: Beneficiário
+    section Descoberta
+      Acessa o site da instituição: 4
+    section Solicitação
+      Preenche formulário e envia documentos: 3
+    section Acompanhamento
+      Consulta status da solicitação: 2
+    section Agendamento
+      Agenda a entrega dos materiais: 5
+    section Recebimento
+      Recebe materiais em casa: 5
+
+```
 
 ## 5. Protótipo de telas
 
