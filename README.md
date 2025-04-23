@@ -121,12 +121,16 @@ Sistema para auxiliar no gerênciamento de uma instituição de caridade, que re
 
 ### digrama feito no white star (versão 1)
 
+
+**Exemplo 1**
+
 ![diagrama de classe](https://github.com/monteiro74/sdmc/blob/main/diagrama_de_classe.png)
 
 
 > [!TIP]
 > Faça um diagrama de classe usando Markdown e Mermaid, para os requisitos abaixo:
 
+**Exemplo 2**
 
 ```mermaid
 classDiagram
@@ -349,11 +353,108 @@ incluir o digrama feito no white star
 ![]()
 -->
 
+```mermaid
+flowchart TD
+    Start([Início])
+    
+    A[Cadastro de Doadores]
+    B[Cadastro de Beneficiários]
+    C[Cadastro de Materiais]
+    D[Campanha de Arrecadação]
+    E[Recebimento de Doações]
+    F{Depósito cheio?}
+    G[Material fica com o Doador temporariamente]
+    H[Material vai para o Depósito]
+    I[Atualizar Controle de Estoque]
+    J[Agendamento com Beneficiário]
+    K[Separar materiais]
+    L[Entrega com Caminhão/Pickup]
+    M[Registrar entrega: data, hora, beneficiário]
+    N[Atualizar Estoque]
+    O[Publicar informações no Site]
+    P[Encerrar processo]
+
+    Start --> A
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F -- Sim --> G --> I
+    F -- Não --> H --> I
+    I --> J
+    J --> K --> L --> M --> N --> O --> P
+
+```
+
+
+
 ## 3.4. Diagrama de componentes
 
 <!--
 use plantuml
 -->
+
+```mermaid
+graph TB
+    subgraph Site_Institucional
+        A1[Pagina_Doadores]
+        A2[Calendario_Doacoes]
+        A3[Datas_Assembleias]
+        A4[Regimento_Interno]
+        A5[Lista_Beneficiarios]
+        A6[Formulario_Doacao]
+        A7[Formulario_Solicitacao]
+    end
+
+    subgraph Backend
+        B1[Cadastro_Doadores]
+        B2[Cadastro_Beneficiarios]
+        B3[Cadastro_Materiais]
+        B4[Controle_Estoque]
+        B5[Agendamento_Doacoes]
+        B6[Gestao_Campanhas]
+        B7[Controle_Entregas]
+        B8[Gestao_Financeira]
+        B9[Gestao_Pessoas]
+        B10[Regras_Funcionamento]
+    end
+
+    subgraph Infraestrutura
+        C1[(Banco_Dados)]
+        C2[(Deposito)]
+        C3[(Deposito_Temporario)]
+        C4[(Veiculos_Entrega)]
+    end
+
+    %% Conexões entre Site e Backend
+    A1 --> B1
+    A2 --> B5
+    A3 --> B10
+    A4 --> B10
+    A5 --> B2
+    A6 --> B1
+    A7 --> B2
+
+    %% Backend com Banco de Dados
+    B1 --> C1
+    B2 --> C1
+    B3 --> C1
+    B4 --> C1
+    B5 --> C1
+    B6 --> C1
+    B7 --> C1
+    B8 --> C1
+    B9 --> C1
+    B10 --> C1
+
+    %% Estoque e Entregas
+    B4 --> C2
+    B4 --> C3
+    B7 --> C4
+
+```
+
 
 ## 3.5. Diagrama de implantação
 
