@@ -678,6 +678,12 @@ architecture-beta
 ```
 -->
 
+
+**Exemplo:**
+
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/pilha.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/pilha.png)
+
+
 ## 8. Cronograma, Gráfico de Gantt
 
 **Exemplo:**
