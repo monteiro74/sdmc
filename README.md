@@ -402,9 +402,9 @@ Colocar as histórias de usuários no formato:
 
 ## 5. Protótipo de telas
 
-Exemplo:
+**Exemplo:**
 
-
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png)
 
 ## 6. Diagrama de navegação de tela
 
@@ -431,11 +431,14 @@ architecture-beta
 
 ## 8. Cronograma, Gráfico de Gantt
 
+**Exemplo:**
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png)
 
 
 ## 9. Estimativa de custos
+
+**Exemplo:**
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
