@@ -12,6 +12,8 @@ Sistema para Doação de Material de Construção (SDMC)
     - [3.1.1. Descrição do Diagrama de classe:](#311-descrição-do-diagrama-de-classe)
   - [3.2. Diagrama ER](#32-diagrama-er)
   - [3.3. Diagrama de casos de uso](#33-diagrama-de-casos-de-uso)
+    - [3.3.1. Exemplo 1](#331-exemplo-1)
+    - [3.3.2. Exemplo 2](#332-exemplo-2)
   - [3.3. Diagrama de atividade](#33-diagrama-de-atividade)
   - [3.4. Diagrama de componentes](#34-diagrama-de-componentes)
   - [3.5. Diagrama de implantação](#35-diagrama-de-implantação)
@@ -24,7 +26,7 @@ Sistema para Doação de Material de Construção (SDMC)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
-  - [8. Cronograma e Gantt](#8-cronograma-e-gantt)
+  - [8. Cronograma, Gráfico de Gantt](#8-cronograma-gráfico-de-gantt)
   - [9. Estimativa de custos](#9-estimativa-de-custos)
   - [10. Anexos](#10-anexos)
     - [10.1. Script SQL](#101-script-sql)
@@ -319,6 +321,8 @@ zenuml
 ```
 -->
 
+### 3.3.1. Exemplo 1
+
 ```mermaid
 sequenceDiagram
     Alice->>John: Hello John, how are you?
@@ -326,13 +330,14 @@ sequenceDiagram
     Alice-)John: See you later!
 ```
 
+### 3.3.2. Exemplo 2
 
-![casos de uso](https://github.com/monteiro74/sdmc/blob/main/casos_de_uso_v1.png)
+![https://github.com/monteiro74/sdmc/blob/main/casos_de_uso_v1.png](https://github.com/monteiro74/sdmc/blob/main/casos_de_uso_v1.png)
 
 
 
-incluir o digrama feito no white star
-![]()
+> [!TIP]
+> Dica para incluir um incluir o digrama feito no white star ! [ ] ( )
 
 ## 3.3. Diagrama de atividade
 
@@ -397,6 +402,8 @@ Colocar as histórias de usuários no formato:
 
 ## 5. Protótipo de telas
 
+Exemplo:
+
 
 
 ## 6. Diagrama de navegação de tela
@@ -422,13 +429,15 @@ architecture-beta
 ```
 -->
 
-## 8. Cronograma e Gantt
+## 8. Cronograma, Gráfico de Gantt
+
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png)
 
-![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
 ## 9. Estimativa de custos
+
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
 
 ## 10. Anexos
