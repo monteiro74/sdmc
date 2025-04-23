@@ -424,6 +424,9 @@ architecture-beta
 
 ## 8. Cronograma e Gantt
 
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png)
+
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
 ## 9. Estimativa de custos
 
