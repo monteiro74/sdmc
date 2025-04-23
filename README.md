@@ -465,6 +465,8 @@ use plantuml
 !define DeploymentUML
 -->
 
+![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/diagrama_de_componentes.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/diagrama_de_componentes.png)
+
 ## 3.6. Diagramas C4
 
 ### 3.6.1. Diagrama C4 de contexto.
@@ -473,11 +475,73 @@ use plantuml
 C4 System Context Diagram (C4Context)
 -->
 
+```mermaid
+graph TB
+    subgraph Usuarios
+        U1[Pessoa Fisica Doadora]
+        U2[Beneficiario]
+        U3[Staff / Voluntario / Estagiario]
+        U4[Gerente Contabil]
+        U5[Visitante do Site]
+    end
+
+    subgraph Sistema
+        S1[Sistema da Instituicao]
+    end
+
+    U1 -->|Doa Materiais| S1
+    U2 -->|Solicita Materiais| S1
+    U3 -->|Opera internamente| S1
+    U4 -->|Gerencia contas| S1
+    U5 -->|Acessa informacoes| S1
+
+    S1 -->|Entrega materiais| U2
+    S1 -->|Solicita entrega| U1
+
+
+```
+
+
 ### 3.6.2. Diagrama C4 de contêiner
 
 <!--
 C4 Container diagram (C4Container)
 -->
+
+```mermaid
+graph TB
+    S1[Sistema da Instituição]
+
+    subgraph Web
+        C1[Site Institucional]
+    end
+
+    subgraph Aplicações Internas
+        C2[App Administrativo]
+        C3[Gestão de Campanhas]
+        C4[Gestão de Estoque]
+        C5[Financeiro]
+        C6[Gestão de Beneficiários e Doadores]
+        C7[Agendamentos e Logística]
+    end
+
+    DB[(Banco de Dados)]
+    C1 --> DB
+    C2 --> DB
+    C3 --> DB
+    C4 --> DB
+    C5 --> DB
+    C6 --> DB
+    C7 --> DB
+
+    C1 --> C6
+    C1 --> C7
+
+    S1 --> C1
+    S1 --> C2
+
+```
+
 
 ### 3.6.3. Diagrama C4 de componente
 
@@ -485,11 +549,55 @@ C4 Container diagram (C4Container)
 C4 Component diagram (C4Component)
 -->
 
+```mermaid
+graph TB
+    C4[Gestão de Estoque]
+
+    E1[Componente: Registro de Entrada]
+    E2[Componente: Registro de Saída]
+    E3[Componente: Consulta de Localização]
+    E4[Componente: Consulta de Estoque por Tipo]
+    E5[Componente: Histórico de Movimentação]
+
+    C4 --> E1
+    C4 --> E2
+    C4 --> E3
+    C4 --> E4
+    C4 --> E5
+
+    E1 --> DB[(Banco de Dados)]
+    E2 --> DB
+    E3 --> DB
+    E4 --> DB
+    E5 --> DB
+
+```
+
+
 ### 3.6.4. Diagrama C4 de código
 
 <!--
 C4 Deployment diagram (C4Deployment)
 -->
+
+```mermaid
+graph TB
+    subgraph RegistroEntrada.py
+        F1[Funcao: validar_material]
+        F2[Funcao: registrar_doacao]
+        F3[Funcao: verificar_deposito]
+        F4[Funcao: registrar_estoque]
+    end
+
+    UI[Formulario Web: Doacao] --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 --> F4
+    F4 --> DB[(Tabela: Estoque)]
+
+
+```
+
 
 ## 4. Histórias de usuário
 
