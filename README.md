@@ -400,12 +400,15 @@ Colocar as histórias de usuários no formato:
 
 -->
 
+> [!TIP]
+> Dica de Prompt...
+
 Prompt
 Leia a lista de requisitos abaixo:
 [Lista de requisitos]
-1.
-2.
-3.
+1.<br>
+2.<br>
+3.<br>
 
 A partir da [Lista de requisitos] elabore histórias de usuário de acordo com o formato a seguir:
 Como um [tipo de usuário], eu quero [ação] para que [benefício].
@@ -417,6 +420,8 @@ Como um [tipo de usuário], eu quero [ação] para que [benefício].
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png)
 
+> [!TIP]
+> Dica de Prompt...
 
 Prompt para criar telas:
 
@@ -424,20 +429,25 @@ Faça uma tela em html 5, css, php e javascript da seguinte forma:
 
 usando python com (django) ou desktop usando qt ou tkinter
 
-1. divida a tela em 3 partes:
-a primeira parte deverá ter o título da tela
-a segunda parte terá botões para operações crud
-a última parte terá os labels e campos
+1. divida a tela em 3 partes:<br>
+a primeira parte deverá ter o título da tela <br>
+a segunda parte terá botões para operações crud <br>
+a última parte terá os labels e campos <br>
 
 a tela deverá mostrar um crud para a tabela descrita abaixo:
 
-Idpet ---> int
-NomeDoPed --> varhcar(100)
-.... listar os campos ....
+Idpet ---> int<br>
+NomeDoPed --> varchar(100)<br>
+Raça do pet --> varchat(50) <br>
+.... listar os campos ....<br>
 
 
 ## 6. Diagrama de navegação de tela
 
+> [!TIP]
+> Dica de ferramenta: https://pencil-evolus-vn.translate.goog/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc
+
+![https://raw.githubusercontent.com/monteiro74/prototipacao_mobile_evoluspencil/refs/heads/main/Diagrama_v1.png](https://raw.githubusercontent.com/monteiro74/prototipacao_mobile_evoluspencil/refs/heads/main/Diagrama_v1.png)
 
 
 ## 7. Pilha tecnológica
@@ -473,12 +483,15 @@ architecture-beta
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
 
+> [!TIP]
+> Dica de Prompt...
+
 Promtp para gráfico de gantt:
 
-Leia o [Cronograma de desenvolvimento] abaixo:
-1 Analise de requisitos preliminar, de 05/05/2025 a 09/05/2025
-2 Projeto básico, de 12/05/2025 a 16/05/2025
-3 Detalhamento do projeto
+Leia o [Cronograma de desenvolvimento] abaixo: <br>
+1 Analise de requisitos preliminar, de 05/05/2025 a 09/05/2025 <br>
+2 Projeto básico, de 12/05/2025 a 16/05/2025 <br>
+3 Detalhamento do projeto <br>
 
 Faça unm gráfico de Gantt usando Mermaid e Markdown:
 
