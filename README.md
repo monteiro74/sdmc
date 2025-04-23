@@ -400,11 +400,41 @@ Colocar as histórias de usuários no formato:
 
 -->
 
+Prompt
+Leia a lista de requisitos abaixo:
+[Lista de requisitos]
+1.
+2.
+3.
+
+A partir da [Lista de requisitos] elabore histórias de usuário de acordo com o formato a seguir:
+Como um [tipo de usuário], eu quero [ação] para que [benefício].
+
+
 ## 5. Protótipo de telas
 
 **Exemplo:**
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png)
+
+
+Prompt para criar telas:
+
+Faça uma tela em html 5, css, php e javascript da seguinte forma:
+
+usando python com (django) ou desktop usando qt ou tkinter
+
+1. divida a tela em 3 partes:
+a primeira parte deverá ter o título da tela
+a segunda parte terá botões para operações crud
+a última parte terá os labels e campos
+
+a tela deverá mostrar um crud para a tabela descrita abaixo:
+
+Idpet ---> int
+NomeDoPed --> varhcar(100)
+.... listar os campos ....
+
 
 ## 6. Diagrama de navegação de tela
 
@@ -442,6 +472,15 @@ architecture-beta
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
+
+Promtp para gráfico de gantt:
+
+Leia o [Cronograma de desenvolvimento] abaixo:
+1 Analise de requisitos preliminar, de 05/05/2025 a 09/05/2025
+2 Projeto básico, de 12/05/2025 a 16/05/2025
+3 Detalhamento do projeto
+
+Faça unm gráfico de Gantt usando Mermaid e Markdown:
 
 ## 10. Anexos
 
