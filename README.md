@@ -1,10 +1,11 @@
 # SDMC - Sistema para Doação de Material de Construção
 
 
-
+# Sumário
 
 
 - [SDMC - Sistema para Doação de Material de Construção](#sdmc---sistema-para-doação-de-material-de-construção)
+- [Sumário](#sumário)
 - [1. Introdução](#1-introdução)
 - [2. Descrição](#2-descrição)
   - [2.1. Requisitos.](#21-requisitos)
@@ -91,6 +92,8 @@ Sistema para auxiliar no gerênciamento de uma instituição de caridade, que re
 | 26 | A Instituição deverá ter um seu Site Institucional uma lista de doares, calendário de doação, datas de assembléis, redimento interno, lista de Beneficionários e formuláiros para os que desejarem doar ou receber materiais de construção. |
 | 27 | O Beneficiário deverá apresentar declaração de rendimento ou outro documento equivalente que indique sua situação. |
 
+[Voltar ao início](#sumário)
+
 ## 2.2. Funcionais e não-funcionais
 
 > [!TIP]
@@ -128,7 +131,7 @@ Sistema para auxiliar no gerênciamento de uma instituição de caridade, que re
 | O Beneficiário deverá apresentar declaração de rendimento ou outro documento equivalente que indique sua situação | Não Funcional     |
 
 
-
+[Voltar ao início](#sumário)
 
 
 # 3. Diagramas
@@ -229,6 +232,10 @@ classDiagram
 
 ```
 
+
+[Voltar ao início](#sumário)
+
+
 ### 3.1.1. Descrição do Diagrama de classe:
 
 Instituicao é a classe principal, representando a entidade que administra a organização, que possui atributos como nome, CNPJ, localização, etc.
@@ -244,6 +251,8 @@ Doadores e Beneficiarios são as classes que representam as pessoas que doam e a
 ControleEstoque é a classe que gerencia o controle do estoque, registrando entradas e saídas de materiais.
 
 Veiculo refere-se aos veículos utilizados pela instituição para transportar materiais.
+
+[Voltar ao início](#sumário)
 
 ## 3.2. Diagrama ER
 
@@ -322,7 +331,7 @@ erDiagram
 
 ```
 
-
+[Voltar ao início](#sumário)
 
 
 ## 3.3. Diagrama de casos de uso
@@ -349,6 +358,8 @@ sequenceDiagram
     John-->>Alice: Great!
     Alice-)John: See you later!
 ```
+
+[Voltar ao início](#sumário)
 
 ### 3.3.2. Exemplo 2
 
@@ -403,7 +414,7 @@ flowchart TD
 
 ```
 
-
+[Voltar ao início](#sumário)
 
 ## 3.4. Diagrama de componentes
 
@@ -471,6 +482,9 @@ graph TB
 
 ```
 
+[Voltar ao início](#sumário)
+
+
 
 ## 3.5. Diagrama de implantação
 
@@ -482,6 +496,10 @@ use plantuml
 -->
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/diagrama_de_componentes.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/diagrama_de_componentes.png)
+
+
+[Voltar ao início](#sumário)
+
 
 ## 3.6. Diagramas C4
 
@@ -516,7 +534,7 @@ graph TB
 
 
 ```
-
+[Voltar ao início](#sumário)
 
 ### 3.6.2. Diagrama C4 de contêiner
 
@@ -558,6 +576,7 @@ graph TB
 
 ```
 
+[Voltar ao início](#sumário)
 
 ### 3.6.3. Diagrama C4 de componente
 
@@ -589,6 +608,7 @@ graph TB
 
 ```
 
+[Voltar ao início](#sumário)
 
 ### 3.6.4. Diagrama C4 de código
 
@@ -613,6 +633,8 @@ graph TB
 
 
 ```
+
+[Voltar ao início](#sumário)
 
 
 ## 4. Histórias de usuário
@@ -661,6 +683,9 @@ Como visitante do site, eu quero visualizar o calendário de doações e datas d
 
 Como visitante do site, eu quero baixar o regimento interno e conhecer os beneficiários para entender melhor o funcionamento da instituição e seu impacto social.
 
+
+[Voltar ao início](#sumário)
+
 ### 4.1. Organização de épicos e features
 
 #### 4.1.1. Épico 1: Gestão de Doadores
@@ -678,6 +703,8 @@ Lista pública de doadores no site
 
 Agendamento de entrega pós-depósito cheio
 
+[Voltar ao início](#sumário)
+
 #### 4.1.2. Épico 2: Gestão de Beneficiários
 Objetivo: Facilitar a solicitação e entrega de materiais para quem precisa
 
@@ -692,6 +719,8 @@ Consulta de estoque disponível
 Agendamento de entrega de materiais
 
 Visualização de status da solicitação
+
+[Voltar ao início](#sumário)
 
 #### 4.1.3. Épico 3: Operações Internas da Instituição
 Objetivo: Organizar e manter o funcionamento do sistema da instituição
@@ -708,6 +737,9 @@ Controle de veículos para logística
 
 Acesso ao regimento interno e horários de funcionamento
 
+[Voltar ao início](#sumário)
+
+
 #### 4.1.4. Épico 4: Gestão Financeira
 Objetivo: Garantir o controle contábil da instituição
 
@@ -720,6 +752,8 @@ Controle de contas a receber
 Geração de relatórios contábeis
 
 Vinculação de movimentações a eventos ou campanhas
+
+[Voltar ao início](#sumário)
 
 #### 4.1.5. Épico 5: Transparência e Comunicação
 Objetivo: Divulgar ações, regras e dados da instituição ao público
@@ -736,6 +770,8 @@ Lista de beneficiários atendidos (parcial/pública)
 
 Formulários de doação e solicitação acessíveis
 
+[Voltar ao início](#sumário)
+
 ### 4.2. Jornada do usuário
 
 #### 4.2.1. Jornada do Usuário: Doador
@@ -748,6 +784,8 @@ Formulários de doação e solicitação acessíveis
 | Entrega         | Aguarda agendamento ou guarda material temporariamente | Email / WhatsApp     | Confiante        | Notificação se depósito estiver cheio        |
 | Reconhecimento  | Vê seu nome na lista de doadores                   | Página pública          | Valorizado       | Ranking ou certificado digital de doador     |
 
+[Voltar ao início](#sumário)
+
 #### 4.2.2. Jornada do Usuário: Beneficiári
 
 | Etapa           | Ação                                               | Ponto de Contato       | Emoção Esperada | Oportunidade                                |
@@ -758,6 +796,7 @@ Formulários de doação e solicitação acessíveis
 | Agendamento     | Agenda a entrega dos materiais                     | Sistema de agendamento  | Aliviado         | Escolha de datas e veículos disponíveis      |
 | Recebimento     | Recebe materiais em casa                           | Caminhão da instituição | Grato            | Avaliação de satisfação pós-serviço          |
 
+[Voltar ao início](#sumário)
 
 **Exemplos usando mermaid e journey**
 
@@ -780,6 +819,8 @@ journey
 
 ```
 
+[Voltar ao início](#sumário)
+
 **Exemplos **
 
 ```mermaid
@@ -798,6 +839,8 @@ journey
       Recebe materiais em casa: 5
 
 ```
+
+[Voltar ao início](#sumário)
 
 ## 5. Protótipo de telas
 
@@ -826,6 +869,7 @@ NomeDoPed --> varchar(100)<br>
 Raça do pet --> varchat(50) <br>
 .... listar os campos ....<br>
 
+[Voltar ao início](#sumário)
 
 ## 6. Diagrama de navegação de tela
 
@@ -834,6 +878,7 @@ Raça do pet --> varchat(50) <br>
 
 ![https://raw.githubusercontent.com/monteiro74/prototipacao_mobile_evoluspencil/refs/heads/main/Diagrama_v1.png](https://raw.githubusercontent.com/monteiro74/prototipacao_mobile_evoluspencil/refs/heads/main/Diagrama_v1.png)
 
+[Voltar ao início](#sumário)
 
 ## 7. Pilha tecnológica
 
@@ -854,6 +899,7 @@ architecture-beta
 ```
 -->
 
+[Voltar ao início](#sumário)
 
 **Exemplo:**
 
@@ -866,6 +912,8 @@ architecture-beta
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png)
 
+[Voltar ao início](#sumário)
+
 
 ## 9. Estimativa de custos
 
@@ -873,6 +921,7 @@ architecture-beta
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/orcamento.png)
 
+[Voltar ao início](#sumário)
 
 > [!TIP]
 > Dica de Prompt...
@@ -1018,6 +1067,8 @@ CREATE TABLE DOACAO_MATERIAL (
 
 ```
 
+[Voltar ao início](#sumário)
+
 ### 10.2. Dados artificiais para testes de banco
 
 
@@ -1146,4 +1197,6 @@ VALUES
 (4, 5);
 
 ```
+
+[Voltar ao início](#sumário)
 
