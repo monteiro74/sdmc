@@ -28,21 +28,6 @@
     - [3.6.4. Diagrama C4 de código](#364-diagrama-c4-de-código)
   - [4. Histórias de usuário](#4-histórias-de-usuário)
     - [4.1. Organização de épicos e features](#41-organização-de-épicos-e-features)
-      - [4.1.1. Épico 1: Gestão de Doadores](#411-épico-1-gestão-de-doadores)
-      - [4.1.2. Épico 2: Gestão de Beneficiários](#412-épico-2-gestão-de-beneficiários)
-      - [4.1.3. Épico 3: Operações Internas da Instituição](#413-épico-3-operações-internas-da-instituição)
-      - [4.1.4. Épico 4: Gestão Financeira](#414-épico-4-gestão-financeira)
-      - [4.1.5. Épico 5: Transparência e Comunicação](#415-épico-5-transparência-e-comunicação)
-    - [4.2. Jornada do usuário](#42-jornada-do-usuário)
-      - [4.2.1. Jornada do Usuário: Doador](#421-jornada-do-usuário-doador)
-      - [4.2.2. Jornada do Usuário: Beneficiári](#422-jornada-do-usuário-beneficiári)
-  - [5. Protótipo de telas](#5-protótipo-de-telas)
-  - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
-  - [7. Pilha tecnológica](#7-pilha-tecnológica)
-  - [8. Cronograma, Gráfico de Gantt](#8-cronograma-gráfico-de-gantt)
-  - [9. Estimativa de custos](#9-estimativa-de-custos)
-  - [10. Anexos](#10-anexos)
-    - [10.1. Script SQL](#101-script-sql)
     - [10.2. Dados artificiais para testes de banco](#102-dados-artificiais-para-testes-de-banco)
 
 
@@ -138,6 +123,10 @@ Sistema para auxiliar no gerênciamento de uma instituição de caridade, que re
 # 3. Diagramas
 
 ## 3.1. Diagrama de classe
+
+```
+O diagrama de classes, um dos principais diagramas da UML (Unified Modeling Language), serve para representar a estrutura estática de um sistema orientado a objetos, descrevendo suas classes, atributos, métodos e os relacionamentos entre elas, como herança, associação, agregação e composição. Ele é fundamental durante a fase de análise e design, pois permite visualizar como os objetos do sistema interagem, favorecendo a compreensão, a reutilização de código e a manutenção da arquitetura do software.
+```
 
 ### digrama feito no white star (versão 1)
 
@@ -257,6 +246,11 @@ Veiculo refere-se aos veículos utilizados pela instituição para transportar m
 
 ## 3.2. Diagrama ER
 
+```
+O diagrama Entidade-Relacionamento (DER) é utilizado para modelar a estrutura lógica de um banco de dados, representando entidades (tabelas), atributos (colunas) e os relacionamentos entre essas entidades. Ele permite visualizar de forma clara como os dados estão organizados, quais conexões existem entre diferentes conjuntos de dados e quais são as regras de integridade, como cardinalidade e dependência. O DER é essencial na fase de projeto de banco de dados, facilitando a criação de esquemas eficientes, consistentes e alinhados aos requisitos do sistema.
+
+```
+
 
 > [!TIP]
 > Faça um diagrama de Entidade Relacionamento usando Markdown e Mermaid, para os requisitos abaixo:
@@ -337,6 +331,13 @@ erDiagram
 
 ## 3.3. Diagrama de casos de uso
 
+
+```
+O diagrama de casos de uso é utilizado para representar, de forma simples e visual, as funcionalidades que um sistema deve oferecer sob a perspectiva dos usuários (atores), descrevendo as interações entre esses atores e os diferentes casos de uso (funcionalidades ou serviços). Ele é essencial na fase de levantamento e especificação de requisitos, pois ajuda a esclarecer o que o sistema deve fazer, sem entrar em detalhes técnicos, promovendo uma comunicação eficiente entre desenvolvedores, analistas e partes interessadas
+
+```
+
+
 > [!TIP]
 > Faça um diagrama de Casos de Uso usando Markdown e PlantUML, para os requisitos abaixo:
 
@@ -372,6 +373,11 @@ sequenceDiagram
 > Dica para incluir um incluir o digrama feito no white star ! [ ] ( )
 
 ## 3.3. Diagrama de atividade
+
+```
+O diagrama de atividades é utilizado para modelar o fluxo de controle ou de atividades dentro de um sistema, representando processos, decisões, paralelismos e sequências de ações. Ele é especialmente útil para descrever logicamente como uma funcionalidade é executada, seja em um processo de negócio ou em um algoritmo, permitindo visualizar caminhos alternativos, ramificações e condições. Muito empregado em análise de requisitos e modelagem de processos, esse diagrama facilita a compreensão e validação do comportamento do sistema por todos os envolvidos no projeto.
+
+```
 
 
 <!--
@@ -418,6 +424,13 @@ flowchart TD
 [Voltar ao início](#sumário)
 
 ## 3.4. Diagrama de componentes
+
+```
+
+O diagrama de componentes é utilizado para representar a organização e a dependência entre os módulos de software (componentes) em um sistema, mostrando como eles estão estruturados e como se comunicam por meio de interfaces. Ele é essencial para a modelagem da arquitetura lógica do sistema, especialmente em projetos de média e grande escala, pois permite visualizar a divisão em partes reutilizáveis, facilitando o entendimento da modularidade, da manutenção e da integração entre diferentes partes do software.
+
+```
+
 
 <!--
 use plantuml
@@ -489,6 +502,14 @@ graph TB
 
 ## 3.5. Diagrama de implantação
 
+
+```
+
+O diagrama de implantação serve para representar a arquitetura física de um sistema, mostrando como os componentes de software são distribuídos entre os nós de hardware (servidores, dispositivos, redes), além das conexões entre esses elementos. Ele é fundamental para visualizar a infraestrutura necessária para executar o sistema, evidenciando aspectos como servidores, bancos de dados, dispositivos móveis e a comunicação entre eles. Esse diagrama é especialmente útil nas fases de planejamento da infraestrutura, implantação e manutenção de sistemas distribuídos ou baseados em nuvem.
+
+```
+
+
 <!--
 use plantuml
 
@@ -505,6 +526,12 @@ use plantuml
 ## 3.6. Diagramas C4
 
 ### 3.6.1. Diagrama C4 de contexto.
+
+```
+O diagrama C4 de contexto, primeiro nível da abordagem C4 (Context, Container, Component, Code), serve para fornecer uma visão geral de alto nível de um sistema, mostrando como ele se encaixa no ambiente em que está inserido. Ele representa os principais atores (usuários, sistemas externos) que interagem com o sistema em questão, bem como os fluxos de informações e relações entre eles. Esse diagrama é ideal para comunicação com stakeholders não técnicos, pois foca no "quê" e "quem" sem detalhar implementações, facilitando o entendimento dos limites e objetivos do sistema.
+
+```
+
 
 <!--
 C4 System Context Diagram (C4Context)
@@ -538,6 +565,14 @@ graph TB
 [Voltar ao início](#sumário)
 
 ### 3.6.2. Diagrama C4 de contêiner
+
+
+```
+
+O diagrama C4 de contêiner, segundo nível da abordagem C4, serve para detalhar a arquitetura interna de um sistema ao mostrar os principais contêineres de software que o compõem — como aplicações web, serviços, bancos de dados e APIs — e como esses contêineres se comunicam entre si e com os usuários externos. Ele ajuda a entender como o sistema está dividido logicamente em partes executáveis e implantáveis, revelando responsabilidades, tecnologias utilizadas e interações. Esse diagrama é especialmente útil para arquitetos e desenvolvedores planejarem a estrutura técnica e a distribuição dos serviços dentro do sistema.
+
+```
+
 
 <!--
 C4 Container diagram (C4Container)
@@ -581,6 +616,14 @@ graph TB
 
 ### 3.6.3. Diagrama C4 de componente
 
+
+```
+O diagrama C4 de componente, terceiro nível da abordagem C4, é usado para detalhar a estrutura interna de um contêiner, mostrando os principais componentes (módulos, classes, serviços ou bibliotecas) que o compõem, suas responsabilidades e como eles se relacionam. Esse diagrama ajuda a compreender a organização lógica do código dentro de cada contêiner, facilitando a comunicação entre desenvolvedores e a tomada de decisões sobre design modular, reutilização e coesão. Ele é especialmente útil para orientar a implementação e manutenção de sistemas complexos, promovendo clareza na divisão de responsabilidades internas.
+
+```
+
+
+
 <!--
 C4 Component diagram (C4Component)
 -->
@@ -613,6 +656,15 @@ graph TB
 
 ### 3.6.4. Diagrama C4 de código
 
+
+```
+O diagrama C4 de código, quarto e mais detalhado nível da abordagem C4, serve para ilustrar a estrutura interna de um componente específico, normalmente focando em classes, métodos e suas relações em nível de código-fonte. Ele é útil para desenvolvedores que precisam entender com precisão como determinada funcionalidade está implementada, facilitando a leitura, manutenção e extensão do código. Embora o C4 enfatize que esse nível seja opcional e muitas vezes substituído por ferramentas automatizadas de documentação de código, ele pode ser valioso em contextos onde clareza e revisão técnica são essenciais.
+
+```
+
+
+
+
 <!--
 C4 Deployment diagram (C4Deployment)
 -->
@@ -639,6 +691,13 @@ graph TB
 
 
 ## 4. Histórias de usuário
+
+
+```
+
+Histórias de usuários são descrições breves e informais dos requisitos do sistema escritas da perspectiva do usuário final, com o objetivo de capturar o que o usuário deseja fazer e por quê. Elas são amplamente utilizadas em metodologias ágeis, como Scrum e XP, para orientar o desenvolvimento centrado no valor entregue. Cada história segue geralmente o formato: “Como [tipo de usuário], eu quero [ação ou funcionalidade] para [benefício ou objetivo]”, permitindo que a equipe compreenda claramente o propósito da funcionalidade. Servem para facilitar a comunicação entre stakeholders e desenvolvedores, priorizar funcionalidades no backlog e guiar a construção de software de forma iterativa e incremental.
+
+```
 
 > [!TIP]
 > Dica de Prompt...
@@ -688,6 +747,14 @@ Como visitante do site, eu quero baixar o regimento interno e conhecer os benefi
 [Voltar ao início](#sumário)
 
 ### 4.1. Organização de épicos e features
+
+
+````
+
+Épicos e features são formas de organizar e hierarquizar os requisitos de um sistema em metodologias ágeis. Um épico é uma narrativa de alto nível que descreve uma grande funcionalidade ou necessidade do usuário, abrangendo um conjunto de requisitos amplos que, geralmente, são complexos demais para serem desenvolvidos de uma só vez. Já as features são subconjuntos desses épicos, representando funcionalidades mais específicas que podem ser divididas em histórias de usuário menores e mais gerenciáveis. Ambos servem para estruturar o backlog do produto, facilitando o planejamento, o acompanhamento do progresso e o alinhamento entre as partes interessadas e a equipe de desenvolvimento.
+
+```
+
 
 #### 4.1.1. Épico 1: Gestão de Doadores
 Objetivo: Permitir que cidadãos doem materiais com facilidade e controle
@@ -775,6 +842,12 @@ Formulários de doação e solicitação acessíveis
 
 ### 4.2. Jornada do usuário
 
+```
+A jornada do usuário é uma representação visual ou narrativa que descreve as etapas, interações e experiências que um usuário percorre ao utilizar um sistema, serviço ou produto para atingir um objetivo específico. Ela inclui pontos de contato, emoções, expectativas, dificuldades e decisões ao longo do caminho, oferecendo uma visão centrada no usuário. Essa ferramenta é essencial para entender o comportamento e as necessidades dos usuários, identificar oportunidades de melhoria na experiência e orientar o design de interfaces, funcionalidades e fluxos de uso mais eficientes e satisfatórios.
+
+```
+
+
 #### 4.2.1. Jornada do Usuário: Doador
 
 | Etapa           | Ação                                               | Ponto de Contato       | Emoção Esperada | Oportunidade                                |
@@ -845,6 +918,13 @@ journey
 
 ## 5. Protótipo de telas
 
+
+```
+
+A prototipação de telas é o processo de criar representações visuais, interativas ou estáticas, da interface de um sistema antes do seu desenvolvimento completo, com o objetivo de validar conceitos, testar usabilidade e alinhar expectativas entre usuários, designers e desenvolvedores. Esses protótipos podem variar desde esboços simples (wireframes) até simulações mais realistas (protótipos de alta fidelidade) e servem para antecipar problemas de navegação, layout e funcionalidade. Assim, a prototipação ajuda a reduzir retrabalho, acelerar o desenvolvimento e garantir que o produto final atenda às necessidades reais dos usuários.
+
+```
+
 **Exemplo:**
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/formulario_gerado_por_prompt.png)
@@ -874,6 +954,14 @@ Raça do pet --> varchat(50) <br>
 
 ## 6. Diagrama de navegação de tela
 
+```
+
+O diagrama de navegação de telas é uma representação visual que mostra como as diferentes telas ou páginas de um sistema estão conectadas, indicando os caminhos que o usuário pode seguir durante a interação com a interface. Ele serve para mapear o fluxo de navegação, facilitando o entendimento da estrutura do sistema, a lógica de transições e os pontos de entrada e saída das funcionalidades. Utilizado principalmente em projetos de software e design de interfaces, esse diagrama ajuda equipes de desenvolvimento e design a alinhar o comportamento esperado do sistema, garantindo uma experiência de usuário fluida e coerente.
+
+
+```
+
+
 > [!TIP]
 > Dica de ferramenta: https://pencil-evolus-vn.translate.goog/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc
 
@@ -882,6 +970,13 @@ Raça do pet --> varchat(50) <br>
 [Voltar ao início](#sumário)
 
 ## 7. Pilha tecnológica
+
+
+````
+
+O diagrama de pilha tecnológica, ou descrição da pilha tecnológica, é uma representação organizada das tecnologias, linguagens de programação, frameworks, bancos de dados, serviços e ferramentas utilizadas no desenvolvimento e operação de um sistema. Ele serve para documentar a arquitetura técnica da solução, facilitando a comunicação entre equipes, a tomada de decisões sobre integrações, manutenções e evoluções do sistema. Ao visualizar a pilha tecnológica, é possível compreender como os diferentes componentes se encaixam, identificar dependências e garantir coerência entre as camadas de front-end, back-end, infraestrutura e serviços de suporte.
+
+```
 
 <!--
 
@@ -909,6 +1004,14 @@ architecture-beta
 
 ## 8. Cronograma, Gráfico de Gantt
 
+
+```
+
+O gráfico de Gantt é uma ferramenta visual de gestão de projetos que representa o cronograma das atividades ao longo do tempo, utilizando barras horizontais para indicar a duração, o início e o fim de cada tarefa. Ele serve para planejar, acompanhar e controlar o progresso de um projeto, facilitando a visualização de dependências entre tarefas, prazos e marcos importantes. Amplamente utilizado por equipes de desenvolvimento, gerentes e stakeholders, o gráfico de Gantt permite identificar atrasos, ajustar prazos e garantir que todas as etapas do projeto sejam executadas dentro do cronograma estabelecido.
+
+```
+
+
 **Exemplo:**
 
 ![https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png](https://raw.githubusercontent.com/monteiro74/sdmc/refs/heads/main/cronograma.png)
@@ -917,6 +1020,14 @@ architecture-beta
 
 
 ## 9. Estimativa de custos
+
+
+```
+
+Em um projeto de software, a tabela de estimativa de custos serve para prever e documentar os gastos necessários para o desenvolvimento, implantação e manutenção do sistema, abrangendo recursos humanos, infraestrutura, licenças, ferramentas, treinamentos e outros insumos. Essa tabela permite um planejamento financeiro mais preciso, facilita a tomada de decisões estratégicas, a negociação com stakeholders e o controle orçamentário ao longo do projeto. Além disso, ela ajuda a identificar possíveis excessos ou insuficiências de recursos, promovendo maior transparência e viabilidade econômica do projeto.
+
+```
+
 
 **Exemplo:**
 
@@ -937,6 +1048,14 @@ Leia o [Cronograma de desenvolvimento] abaixo: <br>
 Faça unm gráfico de Gantt usando Mermaid e Markdown:
 
 ## 10. Anexos
+
+
+````
+
+Em um projeto de software, os scripts CREATE TABLE e INSERT com dados fictícios são utilizados nas fases iniciais de desenvolvimento para criar e popular um banco de dados de teste, permitindo a validação da modelagem, a simulação de consultas e a verificação do comportamento das funcionalidades que dependem de dados persistidos. Esses scripts ajudam analistas, desenvolvedores e testadores a identificar erros de estrutura, refinar requisitos e testar interfaces de forma realista antes que dados reais estejam disponíveis. Além disso, ter tabelas no banco com dados auxilia diretamente na prototipação de telas, pois permite que os desenvolvedores criem interfaces mais próximas da versão final, exibindo informações reais e simulando interações com o sistema de forma consistente e funcional.
+
+```
+
 
 ### 10.1. Script SQL
 
