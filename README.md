@@ -50,15 +50,16 @@
 
 
 
-
 # 1. Introdução
 
 * Contexto: tarefa de casa...
 * Motivação: tarefa de casa...
 
+
 # 2. Descrição
 
 Sistema para auxiliar no gerênciamento de uma instituição de caridade, que recebe doações de material de construção e direciona os mesmos para pessoas necessitadas previamente cadastradas.
+
 
 ## 2.1. Requisitos.
 
