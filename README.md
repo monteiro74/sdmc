@@ -37,6 +37,7 @@
       - [4.2.1. Jornada do Usuário: Doador](#421-jornada-do-usuário-doador)
       - [4.2.2. Jornada do Usuário: Beneficiári](#422-jornada-do-usuário-beneficiári)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
+    - [5.1. Exemplo de telas elaboradas via prompt](#51-exemplo-de-telas-elaboradas-via-prompt)
   - [6. Diagrama de navegação de tela](#6-diagrama-de-navegação-de-tela)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
   - [8. Cronograma, Gráfico de Gantt](#8-cronograma-gráfico-de-gantt)
@@ -953,6 +954,72 @@ Idpet ---> int<br>
 NomeDoPed --> varchar(100)<br>
 Raça do pet --> varchat(50) <br>
 .... listar os campos ....<br>
+
+### 5.1. Exemplo de telas elaboradas via prompt
+
+* Vamos supor que você é um especialista em Python e MySQ<br>
+* Considere que você irá desenvolver interfaces gráficas com Python, com suporte ao português do Brasil <br>
+* Você irá usar CustomTkinter<br>
+
+Escreva um programa em python com CustomTkinter que faça o seguinte:
+
+1. irá ler um arquivo de conexão (conexao.con) com o mysql contendo os seguintes dados
+server='localhost';<br>
+port='3306';<br>
+database='eng_sw';<br>
+user='';<br>
+password='';<br>
+
+2. haverá um form principal com um menu o menu terá as seguintes opções:
+arquivo --> abrir grid alunos (grid_alunos)<br>
+	--> abrir form aluno (form_alunos)<br>
+gráficos -->idade dos alunos (form_idade_alunos)<br>
+         --> quantidade de alunos (form_quantidade_alunos)<br>
+relatórios --> impressão do form alunos (report_alunos) <br>
+sair<br>
+sobre --> form_sobre<br>
+      --> form_licença<br>
+
+3. O sistema deverá ser da seguinte fazer o seguinte: 
+
+Leitura do arquivo de conexão (conexao.con)<br>
+Formulário Principal com:<br>
+	Menu → Arquivo, Gráficos, Relatórios, Sair, Sobre<br>
+	Grid de Alunos (grid_alunos)<br>
+	Formulário de Aluno (form_alunos)<br>
+Gráficos:<br>
+	Idade dos alunos (form_idade_alunos)<br>
+	Quantidade de alunos (form_quantidade_alunos)<br>
+Relatório de Alunos:<br>
+	Impressão do formulário de alunos (report_alunos)<br>
+Sobre e Licença:<br>
+	Janela de informações sobre o sistema.<br>
+
+4. Estrutura de pastas:
+
+meu_app/<br>
+│<br>
+├── main.py<br>
+├── conexao.con<br>
+│<br>
+├── model/<br>
+│   └── conexao_db.py<br>
+│<br>
+├── controller/<br>
+│   ├── aluno_controller.py<br>
+│   ├── grafico_controller.py<br>
+│   └── relatorio_controller.py<br>
+│<br>
+└── view/<br>
+    ├── main_view.py<br>
+    ├── grid_alunos.py<br>
+    ├── form_alunos.py<br>
+    ├── form_idade_alunos.py<br>
+    ├── form_quantidade_alunos.py<br>
+    ├── report_alunos.py<br>
+    ├── form_sobre.py<br>
+    └── form_licenca.py<br>
+
 
 [Voltar ao início](#sumário)
 
